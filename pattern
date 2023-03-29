@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+class Person {
+    public:
+    string name, surname, birth;
+    int id, age;
+    Person(string name, string surname) {
+        this->name = name;
+        this->surname = surname;
+    }
+    int give_birth(){
+        return this->id;
+    }
+};
+int main() {
+    Person *obj1 = new Person("alex", "vorobyev");
+    cout << obj1->name << " " << obj1->surname;
+    return 0;
+}
