@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+class Person {
+    public:
+    string name, surname, birth, id;
+    int age;
+    Person(string name, string surname, string id, int age) {
+        this->name = name;
+        this->surname = surname;
+        this->id = id;
+        this->age = age;
+    }
+    string give_birth(){
+        return this->id;
+    }
+};
+int main() {
+    Person *obj1 = new Person("alex", "vorobyev", "01", 15);
+    cout << "name-"<<obj1->name<<", "<<"surname-" << obj1->surname<<", "<<"id-"<<obj1->id<< ", "<<"age-"<<obj1->age<<".\n";
+    Person *obj2 = new Person("york", "ten", "02", 15);
+    cout << "name-"<<obj2->name<<", "<<"surname-" << obj2->surname<<", "<<"id-"<<obj2->id<< ", "<<"age-"<<obj2->age<<".\n";
+    Person *obj3 = new Person("sam", "dinomov", "03", 15);
+    cout << "name-"<<obj3->name<<", "<<"surname-" << obj3->surname<<", "<<"id-"<<obj3->id<< ", "<<"age-"<<obj3->age<<".\n";
+    Person *obj4 = new Person("w","s", "04", 15);
+    string Parent_id_04 = obj1-> give_birth();
+    cout<< "name-"<<obj4->name<<", "<<"surname-"<<obj4->surname<<", "<<"id-"<<obj4->id<<", "<<"age-"<<obj4->age<<", "<<"Parent_id-"<<Parent_id_04<<".\n";
+    Person *obj5 = new Person("z","y", "05", 15);
+    string Parent_id_05 = obj2-> give_birth();
+    cout<< "name-"<<obj5->name<<", "<<"surname-"<<obj5->surname<<", "<<"id-"<<obj5->id<<", "<<"age-"<<obj5->age<<", "<<"Parent_id-"<<Parent_id_05<<".";
+    
+    
+    return 0;
+}
